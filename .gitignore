@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables and Secrets
+.env
+.env.local
+.env.production
+.env.staging
+
+# Credentials and API Keys
+credentials.json
+*.pem
+*.key
+*.p12
+secrets.json
+
+# Logs
+logs/
+*.log
+
+# Data
+data/cache/
+data/exports/*.json
+data/exports/*.csv
+data/archives/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+
+# Docker
+.dockerignore
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Streamlit specific
+.streamlit/secrets.toml
+
+# Node modules (if any)
+node_modules/
+
+# Cache directories
+.cache/

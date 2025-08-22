@@ -1,0 +1,107 @@
+# DataTObiz Brand Monitoring System Configuration
+# ==============================================
+
+# Google Sheets Configuration
+google_sheets:
+  # Google Sheets spreadsheet ID (get from the URL)
+  # Example: https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit
+  spreadsheet_id: "your_spreadsheet_id_here"
+  
+  # Worksheet name where data will be stored
+  worksheet_name: "Brand_Monitoring"
+  
+  # Path to Google service account credentials JSON file
+  credentials_file: "credentials.json"
+
+# Brand Detection Configuration
+brand:
+  # Primary brand name to search for
+  target_brand: "DataTobiz"
+  
+  # List of brand variations to detect
+  brand_variations:
+    - "DataTobiz"
+    - "Data Tobiz"
+    - "data tobiz"
+    - "DATATOBIZ"
+    - "DataToBiz"
+  
+  # Whether brand detection is case sensitive
+  case_sensitive: false
+  
+  # Whether to allow partial matches within words
+  partial_match: true
+
+# Workflow Execution Configuration
+workflow:
+  # Maximum number of retries for failed operations
+  max_retries: 3
+  
+  # Delay between retries (seconds)
+  retry_delay: 1.0
+  
+  # Whether to run agents in parallel by default
+  parallel_execution: true
+  
+  # Timeout per agent execution (seconds)
+  timeout_per_agent: 60
+  
+  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  log_level: "INFO"
+
+# LLM Model Configurations
+llm_configs:
+  openai:
+    # API key (set via environment variable or Streamlit secrets)
+    api_key: "your_openai_api_key_here"
+    
+    # Model to use (gpt-4, gpt-3.5-turbo, etc.)
+    model: "gpt-3.5-turbo"
+    
+    # Maximum tokens per response
+    max_tokens: 1000
+    
+    # Temperature for response generation (0.0 to 1.0)
+    temperature: 0.1
+    
+    # Request timeout (seconds)
+    timeout: 30
+  
+#  perplexity:
+#    # Perplexity model (online models include web search)
+#    model: "llama-3.1-sonar-small-128k-online"
+#    # Maximum tokens per response
+#    max_tokens: 1000
+#    # Temperature for response generation
+#    temperature: 0.1
+#    # Request timeout (seconds)
+#    timeout: 30
+
+# Stage 2 Features (Future Enhancement Preparation)
+stage2:
+  # Enable ranking detection
+  enable_ranking_detection: false
+  
+  # Keywords that indicate ranking/positioning
+  ranking_keywords:
+    - "first"
+    - "top"
+    - "best"
+    - "leading"
+    - "number one"
+    - "#1"
+    - "premier"
+    - "foremost"
+  
+  # Enable cost tracking
+  enable_cost_tracking: false
+  
+  # Enable detailed analytics
+  enable_analytics: false
+
+# Sample Queries for Testing
+sample_queries:
+  - "best data analytics companies 2024"
+  - "top business intelligence tools"
+  - "leading data visualization software"
+  - "enterprise analytics platforms"
